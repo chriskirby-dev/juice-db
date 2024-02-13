@@ -1,4 +1,8 @@
+/*This file contains definitions for SQL statements and classes.*/
+
 import {empty, type} from '../Util/Core.mjs';
+
+/*ColumnDefinations defines the data types that columns can have in the databaseand the corresponding JavaScript types.*/
 
 export const ColumnDefinations = {
     INTEGER: ['int','integeer','boolean'],
@@ -10,6 +14,22 @@ export const ColumnDefinations = {
 
 export class SQLStatement {
 
+    /* 
+    * The SQLStatement class is a base class for all SQL statements.
+    * It provides a set of methods to build SQL statements.
+    * */
+
+    constructor(){
+        
+        
+        
+        this._main = { statement: '', args: [] };
+        this._order = { statement: '', args: [] };
+        this._limit = { statement: '', args: [] };
+        this._offset = { statement: '', args: [] };
+    }
+
+    //
     insert( ...args ){
         this._main = SQL.insert( ...args );
         return this;

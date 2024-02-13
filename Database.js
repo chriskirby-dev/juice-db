@@ -34,46 +34,25 @@ class Database extends EventEmitter {
         Model.emit('updated', records);
     }
 
-    hasTable(table){
-      
-    }
+    hasTable(table){}
 
-    createTable( table, fields ){
+    createTable( table, fields ){}
 
-    }
+    insert(){ }
 
+    insertAll(){}
 
-    insert(){
+    get(){}
 
-    }
+    getAll(){}
 
-    insertAll(){
+    update(){}
 
-    }
+    updateAll(){}
 
-    get(){
+    delete(){}
 
-    }
-
-    getAll(){
-
-    }
-
-    update(){
-
-    }
-
-    updateAll(){
-
-    }
-
-    delete(){
-
-    }
-
-    addModel(Model){
-
-    }
+    addModel(Model){}
 
     model(name){
         return this.models[name];
